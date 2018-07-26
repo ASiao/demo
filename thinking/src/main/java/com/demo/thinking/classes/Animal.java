@@ -5,19 +5,20 @@ import java.util.Objects;
 /**
  * @description
  * @auther monicamo
- * @date 2018/7/25
+ * @date 2018/7/26
  */
-public class Person implements Comparable<Person>{
+public class Animal {
 
 	private String name;
+
 	private Integer age;
 
-	public Person(String name, Integer age) {
-		this.name = name;
+	public Animal(Integer age) {
 		this.age = age;
 	}
 
-	public Person(Integer age) {
+	public Animal(String name, Integer age) {
+		this.name = name;
 		this.age = age;
 	}
 
@@ -37,20 +38,9 @@ public class Person implements Comparable<Person>{
 		this.age = age;
 	}
 
-
-	@Override
-	public int compareTo(Person o) {
-		if (o.getAge()>this.getAge()) {
-			return -1;
-		}else if (o.getAge()<this.getAge()) {
-			return 1;
-		}
-		return 0;
-	}
-
 	@Override
 	public String toString() {
-		return "Person{" +
+		return "Animal{" +
 				"name='" + name + '\'' +
 				", age=" + age +
 				'}';
@@ -60,8 +50,8 @@ public class Person implements Comparable<Person>{
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Person person = (Person) o;
-		return Objects.equals(age, person.age);
+		Animal animal = (Animal) o;
+		return Objects.equals(age, animal.age);
 	}
 
 	@Override
