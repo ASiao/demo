@@ -1,9 +1,7 @@
 package com.demo.thinking.container;
 
-import com.demo.thinking.classes.NormalPerson;
 import com.demo.thinking.classes.Person;
 
-import javax.jnlp.PersistenceService;
 import java.util.TreeSet;
 
 /**

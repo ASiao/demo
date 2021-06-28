@@ -11,10 +11,15 @@ public class Person implements Comparable<Person>{
 
 	private String name;
 	private Integer age;
+	public static String head = "头";
 
 	public Person(String name, Integer age) {
 		this.name = name;
 		this.age = age;
+	}
+
+	static {
+		System.out.println("父类Person");
 	}
 
 	public Person(Integer age) {
@@ -68,5 +73,8 @@ public class Person implements Comparable<Person>{
 	public int hashCode() {
 
 		return Objects.hash(age);
+	}
+
+	public Person() {
 	}
 }
